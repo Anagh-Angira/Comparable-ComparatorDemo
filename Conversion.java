@@ -10,7 +10,24 @@ public class Conversion {
         System.out.println(bin);
     }
 
+    static void binToDecimal(String str) {
+
+        int pos = 0;
+        int dec = 0;
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+
+            if (str.charAt(i) == '1') {
+                dec += Math.pow(2, pos);
+            }
+            pos++;
+        }
+        System.out.println(dec);
+
+    }
+
     public static void main(String[] args) {
-        decToBin(29);
+        // decToBin(29);
+        binToDecimal("110010");
     }
 }
