@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
 public class TakingArrayInput {
+    static void reverse(int m, int n) {
+
+        n = m + n - (m = n);
+        System.out.println(m + " " + n);
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -19,6 +25,23 @@ public class TakingArrayInput {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+
+        // Java Ternary Operator in
+        int a = 23;
+        int b = 58;
+        int max = 0;
+
+        if (a > b) {
+            max = a;
+        } else {
+            max = b;
+        }
+        System.out.println(max);
+
+        max = (a > b) ? a : b; // Ternary Operator
+        System.out.println(max);
+
+        reverse(12, 13);
 
         sc.close();
     }
